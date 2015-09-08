@@ -3,19 +3,24 @@ require "language/go"
 class SpaceinvadersGo < Formula
   desc "Space Invaders in your terminal written in Go."
   homepage "https://github.com/asib/spaceinvaders"
-  url "https://github.com/asib/spaceinvaders/archive/v1.1.tar.gz"
-  sha256 "af8edccec60db68f1a5c293cbd610f9b5eb66ba4c81ed10222f42eea2971001d"
+  url "https://github.com/asib/spaceinvaders/archive/v1.2.tar.gz"
+  sha256 "e5298c4c13ff42f5cb3bf3913818c5155cf6918fd757124920045485d7ab5b9e"
 
   depends_on "go" => :build
 
   go_resource "github.com/mattn/go-runewidth" do
     url "https://github.com/mattn/go-runewidth.git",
-      :revision => "5890272cd41c5103531cd7b79e428d99c9e97f76"
+      :revision => "12e0ff74603c9a3209d8bf84f8ab349fe1ad9477"
   end
 
   go_resource "github.com/nsf/termbox-go" do
     url "https://github.com/nsf/termbox-go.git",
-      :revision => "785b5546a97f27460cfbc4c77132a46b90beb834"
+      :revision => "347ab0bc907040257edaf8b580f729e12c93ab6b"
+  end
+
+  go_resource "github.com/simulatedsimian/joystick" do
+    url "https://github.com/simulatedsimian/joystick.git",
+      :revision => "6aa8abe045a796cf36b720d0484809e3f70dc5bd"
   end
 
   def install
